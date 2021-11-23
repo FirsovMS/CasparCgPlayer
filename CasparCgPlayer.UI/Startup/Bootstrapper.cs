@@ -13,6 +13,7 @@ namespace CasparCgPlayer.UI.Startup
         {
             var container = new ContainerBuilder();
 
+            container.RegisterType<LogHelper>().AsSelf().SingleInstance();
 
             return container.Build();
         }
