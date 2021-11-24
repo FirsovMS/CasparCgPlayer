@@ -32,7 +32,9 @@ namespace CasparCgPlayer.UI.Startup
 
         private string CreateErrorMessage(Exception exception, string description, string sqlQuery)
         {
-            var stacktrace = string.Join(", ", GetInternalExceptionMessages(exception));
+            var stacktrace = exception != null
+                ? string.Join(", ", GetInternalExceptionMessages(exception))
+                : string.Empty;
 
             var templateList = new List<string>();
             
@@ -62,7 +64,7 @@ namespace CasparCgPlayer.UI.Startup
 
                 exception = exception.InnerException;
 
-            } while (exception.InnerException != null);
+            } while (exception != null);
         }
     }
 
