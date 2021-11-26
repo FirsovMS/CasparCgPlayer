@@ -1,7 +1,10 @@
 ﻿using Autofac;
+using CasparCgPlayer.UI.Handlers;
 using CasparCgPlayer.UI.Startup;
 using CasparCgPlayer.UI.View;
 using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Windows;
 
 namespace CasparCgPlayer.UI
@@ -11,23 +14,24 @@ namespace CasparCgPlayer.UI
     /// </summary>
     public partial class App : Application
     {
-        private readonly IContainer _container;
-        private readonly LogHelper _logger;
+       private readonly LogHandler _logger;
+
+        public static IContainer Container { get; private set; }
 
         public App()
         {
             var bootrstrapper = new Bootstrapper();
-            _container = bootrstrapper.Bootstrap();
+            Container = bootrstrapper.Bootstrap();
 
-            // yeah, it's a bad usage of service locator here, propably should use 'safe-access' decorator here
-            _logger = _container.Resolve<LogHelper>();
+            // yeah, it's a bad usage of service locator here, propably should use decorator for 'safe-access' here
+            _logger = Container.Resolve<LogHandler>();
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             try
             {
-                var mainWindow = _container.Resolve<MainWindow>();
+                var mainWindow = Container.Resolve<MainWindow>();
                 mainWindow.Show();
             }
             catch (Exception ex)

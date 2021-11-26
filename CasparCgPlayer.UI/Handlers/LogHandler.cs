@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CasparCgPlayer.UI.Startup
+namespace CasparCgPlayer.UI.Handlers
 {
-    public class LogHelper
+    public class LogHandler
     {
         private Logger _logger;
 
         public Logger Logger { get => _logger; }
 
-        public LogHelper()
+        public LogHandler()
         {
             _logger = LogManager.GetCurrentClassLogger();
         }

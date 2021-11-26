@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasparCgPlayer.DataAccess",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasparCgPlayer.Model", "CasparCgPlayer.Model\CasparCgPlayer.Model.csproj", "{FC896408-571C-41D0-B43F-41582C0FF641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{4524D43F-D526-4093-94A0-DFF091CAFE4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasparCgPlayer.Business", "Business\CasparCgPlayer.Business.csproj", "{4524D43F-D526-4093-94A0-DFF091CAFE4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

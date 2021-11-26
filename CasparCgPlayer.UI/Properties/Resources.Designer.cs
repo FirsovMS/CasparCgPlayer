@@ -59,5 +59,37 @@ namespace CasparCgPlayer.UI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ResourceDictionary xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        ///                    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        ///										xmlns:v=&quot;clr-namespace:System;assembly=mscorlib&quot;&gt;
+        ///		&lt;v:String x:Key=&quot;m_Main_title&quot;&gt;CasparCG Player&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_Settings_title&quot;&gt;Settings&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_Settings_tooltip&quot;&gt;Open the Settings window&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_menu_Language&quot;&gt;Language&lt;/v:String&gt;
+        ///&lt;/ResourceDictionary&gt;.
+        /// </summary>
+        internal static string lang {
+            get {
+                return ResourceManager.GetString("lang", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ResourceDictionary xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        ///                    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        ///										xmlns:v=&quot;clr-namespace:System;assembly=mscorlib&quot;&gt;
+        ///		&lt;v:String x:Key=&quot;m_Main_title&quot;&gt;CasparCG Player&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_Settings_title&quot;&gt;Настройки&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_Settings_tooltip&quot;&gt;Открыть окно с настройками приложения&lt;/v:String&gt;
+        ///		&lt;v:String x:Key=&quot;m_menu_Language&quot;&gt;Язык приложения&lt;/v:String&gt;
+        ///&lt;/ResourceDicti [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string lang_ru_RU {
+            get {
+                return ResourceManager.GetString("lang_ru_RU", resourceCulture);
+            }
+        }
     }
 }

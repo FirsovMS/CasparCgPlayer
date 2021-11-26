@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using CasparCgPlayer.UI.Handlers;
 using CasparCgPlayer.UI.View;
 using CasparCgPlayer.UI.ViewModel;
 using System;
@@ -15,10 +16,14 @@ namespace CasparCgPlayer.UI.Startup
         {
             var container = new ContainerBuilder();
 
-            container.RegisterType<LogHelper>().AsSelf().SingleInstance();
+            container.RegisterType<LogHandler>().AsSelf().SingleInstance();
+            container.RegisterType<LanguageHandler>().AsSelf().SingleInstance();
 
-            container.RegisterType<MainWindow>().AsSelf();
+            container.RegisterType<SettingsViewModel>().AsSelf();
+            container.RegisterType<SettingsWindow>().AsSelf();
+
             container.RegisterType<MainViewModel>().AsSelf();
+            container.RegisterType<MainWindow>().AsSelf();
 
             return container.Build();
         }
